@@ -15,16 +15,6 @@ class CountriesController < ApplicationController
     end
   end
 
-  def update_visit
-    @country = Country.find(params[:id])
-    user_country_relation = UserCountryRelation.find_or_create_by_user_id_and_country_id(current_user.id, @country.id)
-    user_country_relation.visited = params[:visited]
-    user_country_relation.save
-    respond_to do |format|
-      format.js
-    end
-  end
-
   def show
     @country = Country.find(params[:id])
     respond_to do |format|

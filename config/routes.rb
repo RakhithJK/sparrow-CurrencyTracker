@@ -3,17 +3,10 @@ CurrencyTracker::Application.routes.draw do
 
   root :to => "currencies#index"
   
-  resources :countries, :only => [:index, :show]  do
-    member do
-      get 'update_visit'
-    end
-  end
+  resources :countries, :only => [:index, :show]
+  resources :currencies, :only => [:index, :show]
 
-  resources :currencies, :only => [:index, :show] do
-    member do
-      get 'update_collect'
-    end
-  end
+  match 'visits/update' => 'visits#update', :as => 'update_visits'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

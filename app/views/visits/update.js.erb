@@ -1,0 +1,7 @@
+<%- if @from == 'country' %>
+$('#visited_countries_chart').replaceWith("<%= escape_javascript(render 'countries/visited_countries_chart') %>");
+SimplePieChart.initialize($('#visited_countries_chart')[0]);
+<%- else %>
+$('#collected_currencies_chart').replaceWith("<%= escape_javascript(render 'currencies/collected_currencies_chart') %>");
+SimplePieChart.initialize($('#collected_currencies_chart')[0]);
+<%- end %>

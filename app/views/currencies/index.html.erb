@@ -5,9 +5,9 @@
 
   <table>
     <tr>
-      <th>Name <%= text_field_tag 'name', '', :id => 'filter', :'data-url' => currencies_path(:format => :js), :placeholder => 'start typing currency\'s name' %></th>
+      <th>Name <%= filter_tag(currencies_path(:format => :js), :placeholder => 'start typing currency\'s name') %></th>
       <th>Code</th>
-      <th>Collected</th>
+      <th><%= check_box_visited_all_tag('currency') %> Collected</th>
       <th></th>
     </tr>
     <tbody id="filter_result_area">

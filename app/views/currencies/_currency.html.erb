@@ -1,6 +1,6 @@
 <tr>
   <td><%= currency.name %></td>
   <td><%= currency.code %></td>
-  <td><%= check_box_tag 'currency', update_collect_currency_path(currency, :format => :js), current_user.collected?(currency), :class => 'visit' %></td>
+  <td><%= check_box_visited_tag currency.country, 'currency' %></td>
   <td><%= link_to 'Show', currency %></td>
 </tr>

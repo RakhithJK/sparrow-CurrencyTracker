@@ -24,13 +24,4 @@ class CurrenciesController < ApplicationController
     end
   end
 
-  def update_collect
-    @currency = Currency.find(params[:id])
-    user_country_relation = UserCountryRelation.find_or_create_by_user_id_and_country_id(current_user.id, @currency.country.id)
-    user_country_relation.visited = params[:visited]
-    user_country_relation.save
-    respond_to do |format|
-      format.js
-    end
-  end
 end
