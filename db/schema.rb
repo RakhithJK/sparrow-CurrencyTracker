@@ -10,22 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509100414) do
+ActiveRecord::Schema.define(:version => 20110509120800) do
 
-  create_table "countries", :id => false, :force => true do |t|
+  create_table "countries", :force => true do |t|
     t.string   "name"
     t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "visited",    :default => false
   end
 
-  create_table "currencies", :id => false, :force => true do |t|
+  create_table "currencies", :force => true do |t|
     t.string   "name"
     t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "country_id"
+  end
+
+  create_table "user_country_relations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "country_id"
+    t.boolean  "visited",    :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

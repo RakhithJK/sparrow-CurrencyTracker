@@ -111,4 +111,12 @@ describe User do
 
   end
 
+  describe "#visited_countries" do
+    pending
+  end
+
+  describe "#not_visited_countries" do
+    pending
+  end
+
 end

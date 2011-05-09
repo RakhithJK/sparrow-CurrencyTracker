@@ -18,7 +18,6 @@ class DataUpdater
     data.keys.each do |key| 
       data[key].each do |attributes|
         object = key.to_s.classify.constantize.find_or_create_by_code(attributes)
-        
       end
     end
   end

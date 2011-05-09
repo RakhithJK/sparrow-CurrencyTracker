@@ -1,0 +1,6 @@
+<tr>
+  <td><%= country.name %></td>
+  <td><%= country.code %></td>
+  <td><%= check_box_tag 'country', update_visit_country_path(country, :format => :js), current_user.visited?(country), :class => 'visit' %></td>
+  <td><%= link_to 'Show', country %></td>
+</tr>

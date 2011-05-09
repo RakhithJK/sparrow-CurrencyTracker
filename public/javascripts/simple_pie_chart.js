@@ -21,14 +21,15 @@ SimplePieChart.initialize = function(root_element) { return new ViewController(r
   },
 
   render: function() {
+    var _this = this;
     $(this.root).html('');
 
     var img = document.createElement('img');
     img.setAttribute('width', this.width);
     img.setAttribute('height', this.height);
+    $(img).load(function(){_this.root.appendChild(img);});
     img.setAttribute('src', this.image_url());
 
-    this.root.appendChild(img);
   },  
 
   image_url: function() {

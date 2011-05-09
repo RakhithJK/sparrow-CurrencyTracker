@@ -1,0 +1,11 @@
+<div id="collected_currencies_chart" class="simple_pie_chart" width='300px' height='100px'>
+  <table>
+    <tr>
+      <th>Collected</th>
+      <td><%= current_user.collected_currencies.length %></td>
+    </tr><tr>
+      <th>Not Collected</th>
+      <td><%= current_user.not_collected_currencies.length %></td>
+    </tr>
+  </table>
+</div>
