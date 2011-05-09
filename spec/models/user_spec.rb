@@ -21,8 +21,8 @@ describe User do
   end
 
   it "should require a user name" do
-    no_email_user = User.new(@attr.merge(:username => ""))
-    no_email_user.should_not be_valid
+    no_name_user = User.new(@attr.merge(:username => ""))
+    no_name_user.should_not be_valid
   end
 
   it "should accept valid email addresses" do
@@ -43,8 +43,14 @@ describe User do
 
   it "should reject duplicate email addresses" do
     User.create!(@attr)
-    user_with_duplicate_email = User.new(@attr)
+    user_with_duplicate_email = User.new(@attr.merge(:username => "user_example2"))
     user_with_duplicate_email.should_not be_valid
+  end
+
+  it "should reject duplicate user name" do
+    User.create!(@attr)
+    user_with_duplicate_name = User.new(@attr.merge(:email => "user@example2.com"))
+    user_with_duplicate_name.should_not be_valid
   end
 
   it "should reject email addresses identical up to case" do

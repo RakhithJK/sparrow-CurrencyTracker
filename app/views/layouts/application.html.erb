@@ -17,6 +17,9 @@
     </ul>
   </nav>
   <ul class="hmenu">
+    <%- if current_user %>
+      <li><%= current_user %></li>
+    <%- end %>
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
   </ul>

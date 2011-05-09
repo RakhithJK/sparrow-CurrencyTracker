@@ -11,6 +11,13 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :username, :login, :password, :password_confirmation, :remember_me
 
+  validates_presence_of :username
+  validates_uniqueness_of :username
+
+  def to_s
+    username || email
+  end
+
   protected
 
   def self.find_for_database_authentication(warden_conditions)
