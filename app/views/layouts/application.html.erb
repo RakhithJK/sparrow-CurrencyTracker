@@ -16,6 +16,10 @@
       <li><%= link_to "Countries", countries_path %></li>
     </ul>
   </nav>
+  <ul class="hmenu">
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+  </ul>
 </header>
 
 <p class="notice"><%= notice %></p>
