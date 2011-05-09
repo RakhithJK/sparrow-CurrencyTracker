@@ -119,4 +119,20 @@ describe User do
     pending
   end
 
+  describe "#collected_currencies" do
+    pending
+  end
+
+  describe "#not_collected_currencies" do
+    pending
+  end
+
+  describe "#visited?" do
+    pending
+  end
+
+  describe "#collected?" do
+    pending
+  end
+
 end
