@@ -10,8 +10,8 @@ Features
 * Track Collected Currencies
 * Charts show you how far along you are!
 
-Test task
-=========
+Test tasks
+==========
 
 For 6 hours I got the following results
 ---------------------------------------
