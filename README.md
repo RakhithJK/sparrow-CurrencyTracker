@@ -30,3 +30,7 @@ Would planned to do next
 * Additional Charting Features
 * Acceptance tests for Additional Table Features
 * Fix broken tests, what was by default
+* Fix chart, now it shows not correct data
+* Refactor User model
+* Optimization quantity queries to DB
+* Tests for models
